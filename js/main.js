@@ -5,7 +5,13 @@ const app = new Vue({
         arrayLength: 10
     },
     methods: {
-
+        addEmail() {
+            this.arrayLength++;
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then((response) => {
+                    this.emailArray.push(response.data.response);
+                })
+        }
     },
     mounted() {
         for( let i = 0; i < this.arrayLength; i++) {
