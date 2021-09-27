@@ -7,11 +7,14 @@
 
 /* Common */
 .container {
+    padding: 1.25rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
-button {
-    padding: 10px;
-    border-radius: 15px;
+button,
+input {
+    text-align: center;
+    padding: .625rem;
+    border-radius: .9375rem;
 }
