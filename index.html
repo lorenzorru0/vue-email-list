@@ -8,10 +8,18 @@
         <title>Vue Email List</title>
     </head>
     <body>
+
+        <div id="root">
+            <ul v-if="emailArray[arrayLength - 1] != null">
+                <li v-for="(email, index) in emailArray" :key="index">
+                    {{email}}
+                </li>
+            </ul>
+        </div>
         
         <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
